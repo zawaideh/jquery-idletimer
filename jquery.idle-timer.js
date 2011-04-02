@@ -109,15 +109,15 @@ $.idleTimer = function(newTimeout, elem){
         obj.idle = !obj.idle;
         
         // reset timeout counter
-        var elapsed = (+new Date) - f.olddate;
-        f.olddate = +new Date;
+        var elapsed = (+new Date) - obj.olddate;
+        obj.olddate = +new Date;
 
         // handle Chrome always triggering idle after js alert or comfirm popup
-        if (idle && (elapsed < timeout)) {
-                idle = false;
+        if (obj.idle && (elapsed < timeout)) {
+                obj.idle = false;
                 clearTimeout($.idleTimer.tId);
                 if (enabled)
-                     $.idleTimer.tId = setTimeout(toggleIdleState, timeout);
+                  $.idleTimer.tId = setTimeout(toggleIdleState, timeout);
                 return;
         }
         

@@ -116,8 +116,8 @@ $.idleTimer = function(newTimeout, elem){
         if (idle && (elapsed < timeout)) {
                 idle = false;
                 clearTimeout($.idleTimer.tId);
-        if (enabled)
-                $.idleTimer.tId = setTimeout(toggleIdleState, timeout);
+                if (enabled)
+                     $.idleTimer.tId = setTimeout(toggleIdleState, timeout);
                 return;
         }
         

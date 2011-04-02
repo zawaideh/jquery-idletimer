@@ -30,6 +30,7 @@
  * THE SOFTWARE.
  */
 
+/* updated to fix Chrome setTimeout issue by Zaid Zawaideh */
 
  // API available in <= v0.8
  /*******************************
